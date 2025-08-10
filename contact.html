@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Sports Coach - Contact</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Contact Us</h1>
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="chat.html">Chat</a></li>
+          <li><a href="tips.html">Tips</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <form id="contact-form" aria-label="Contact form">
+        <label for="name">Name:</label><br />
+        <input type="text" id="name" name="name" required /><br /><br />
+
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" required /><br /><br />
+
+        <label for="message">Message:</label><br />
+        <textarea id="message" name="message" rows="5" required></textarea><br /><br />
+
+        <button type="submit">Send</button>
+      </form>
+      <p id="form-status" role="alert" aria-live="assertive"></p>
+    </main>
+
+    <footer>
+      <p>© 2025 AI Sports Coach. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    const form = document.getElementById("contact-form");
+    const status = document.getElementById("form-status");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      // Basic front-end validation
+      if (!form.checkValidity()) {
+        status.textContent = "Please fill in all required fields correctly.";
+        status.style.color = "red";
+        return;
+      }
+
+      status.textContent = "Thank you for reaching out! We'll get back to you soon.";
+      status.style.color = "green";
+
+      form.reset();
+    });
+  </script>
+</body>
+</html>

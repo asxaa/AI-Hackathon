@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Sports Coach - Chat</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Coach Buddy - Chat</h1>
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="chat.html" class="active">Chat</a></li>
+          <li><a href="tips.html">Tips</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="chat-container">
+        <div id="chat-box" aria-live="polite" aria-label="Chat messages"></div>
+        <form id="chat-form" aria-label="Send message">
+          <input type="text" id="user-input" placeholder="Type your message..." aria-required="true" autocomplete="off" />
+          <button type="submit" aria-label="Send message">Send</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 AI Sports Coach. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
